@@ -1,0 +1,34 @@
+|design6
+clk => clk~0.IN2
+rst => rst~0.IN2
+RED[0] => RED[0]~0.IN1
+BLUE[0] => BLUE[0]~0.IN1
+FW[0] <= FW[0]~1.DB_MAX_OUTPUT_PORT_TYPE
+FW[1] <= FW[1]~0.DB_MAX_OUTPUT_PORT_TYPE
+present_state[0] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+present_state[1] <= present_state~1.DB_MAX_OUTPUT_PORT_TYPE
+present_state[2] <= present_state~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|design6|button:red_button
+clk => state~7.DATAIN
+rst => state~0.OUTPUTSELECT
+rst => state~1.OUTPUTSELECT
+rst => state~2.OUTPUTSELECT
+button[0] => next_state.PRESS.DATAB
+button[0] => Selector0.IN1
+button[0] => state~0.DATAA
+stable_o[0] <= stable_o[0]~0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|design6|button:blue_button
+clk => state~7.DATAIN
+rst => state~0.OUTPUTSELECT
+rst => state~1.OUTPUTSELECT
+rst => state~2.OUTPUTSELECT
+button[0] => next_state.PRESS.DATAB
+button[0] => Selector0.IN1
+button[0] => state~0.DATAA
+stable_o[0] <= stable_o[0]~0.DB_MAX_OUTPUT_PORT_TYPE
+
+

@@ -1,0 +1,21 @@
+
+State Machine - |design6|current_state
+Name current_state.S5 current_state.S4 current_state.S3 current_state.S2 current_state.S1 current_state.S0 
+current_state.S0 0 0 0 0 0 0 
+current_state.S1 0 0 0 0 1 1 
+current_state.S2 0 0 0 1 0 1 
+current_state.S3 0 0 1 0 0 1 
+current_state.S4 0 1 0 0 0 1 
+current_state.S5 1 0 0 0 0 1 
+
+State Machine - |design6|button:blue_button|state
+Name state.IDLE state.HOLD state.PRESS 
+state.IDLE 0 0 0 
+state.PRESS 1 0 1 
+state.HOLD 1 1 0 
+
+State Machine - |design6|button:red_button|state
+Name state.IDLE state.HOLD state.PRESS 
+state.IDLE 0 0 0 
+state.PRESS 1 0 1 
+state.HOLD 1 1 0 

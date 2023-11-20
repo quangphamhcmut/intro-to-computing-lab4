@@ -1,0 +1,36 @@
+|design5
+clk => state~13.DATAIN
+rst => state~0.OUTPUTSELECT
+rst => state~1.OUTPUTSELECT
+rst => state~2.OUTPUTSELECT
+rst => state~3.OUTPUTSELECT
+rst => state~4.OUTPUTSELECT
+rst => state~5.OUTPUTSELECT
+rst => state~6.OUTPUTSELECT
+rst => state~7.OUTPUTSELECT
+rst => state~8.OUTPUTSELECT
+X => next_state.S3.DATAB
+X => Selector0.IN4
+X => Selector1.IN3
+X => next_state.S6.DATAB
+X => Selector2.IN4
+X => Selector3.IN3
+X => next_state.S0.DATAB
+X => Selector4.IN4
+X => Selector5.IN3
+X => Selector0.IN1
+X => Selector0.IN2
+X => Selector1.IN1
+X => Selector2.IN1
+X => Selector2.IN2
+X => Selector3.IN1
+X => Selector4.IN1
+X => Selector4.IN2
+X => Selector5.IN1
+Y[0] <= Y[0]~0.DB_MAX_OUTPUT_PORT_TYPE
+present_state[0] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+present_state[1] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+present_state[2] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+present_state[3] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+

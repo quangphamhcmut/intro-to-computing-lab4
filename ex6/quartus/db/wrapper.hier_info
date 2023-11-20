@@ -1,0 +1,50 @@
+|wrapper
+CLOCK_50 => CLOCK_50.IN1
+KEY[0] => KEY[0].IN1
+KEY[1] => KEY[1].IN1
+KEY[2] => ~NO_FANOUT~
+KEY[3] => rst.IN1
+LEDG[0] <= design6:dut.present_state
+LEDG[1] <= design6:dut.present_state
+LEDG[2] <= design6:dut.present_state
+LEDG[3] <= <GND>
+LEDG[4] <= design6:dut.FW
+LEDG[5] <= design6:dut.FW
+LEDG[6] <= <GND>
+LEDG[7] <= rst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|wrapper|design6:dut
+clk => clk.IN2
+rst => rst.IN2
+RED[0] => RED[0].IN1
+BLUE[0] => BLUE[0].IN1
+FW[0] <= FW[0].DB_MAX_OUTPUT_PORT_TYPE
+FW[1] <= FW[1].DB_MAX_OUTPUT_PORT_TYPE
+present_state[0] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+present_state[1] <= present_state.DB_MAX_OUTPUT_PORT_TYPE
+present_state[2] <= present_state.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|wrapper|design6:dut|button:red_button
+clk => state~1.DATAIN
+rst => state.OUTPUTSELECT
+rst => state.OUTPUTSELECT
+rst => state.OUTPUTSELECT
+button[0] => next_state.PRESS.DATAB
+button[0] => Selector0.IN1
+button[0] => state.DATAA
+stable_o[0] <= stable_o[0].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|wrapper|design6:dut|button:blue_button
+clk => state~1.DATAIN
+rst => state.OUTPUTSELECT
+rst => state.OUTPUTSELECT
+rst => state.OUTPUTSELECT
+button[0] => next_state.PRESS.DATAB
+button[0] => Selector0.IN1
+button[0] => state.DATAA
+stable_o[0] <= stable_o[0].DB_MAX_OUTPUT_PORT_TYPE
+
+

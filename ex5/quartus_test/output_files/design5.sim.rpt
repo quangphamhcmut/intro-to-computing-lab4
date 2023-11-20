@@ -1,0 +1,807 @@
+Simulator report for design5
+Tue Nov 14 21:18:20 2023
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 1.0 us       ;
+; Simulation Netlist Size     ; 336 nodes    ;
+; Simulation Coverage         ;      10.12 % ;
+; Total Number of Transitions ; 1868         ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Cyclone II   ;
++-----------------------------+--------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                                                                               ;
++--------------------------------------------------------------------------------------------+---------------------------------------------------------------------+---------------+
+; Option                                                                                     ; Setting                                                             ; Default Value ;
++--------------------------------------------------------------------------------------------+---------------------------------------------------------------------+---------------+
+; Simulation mode                                                                            ; Functional                                                          ; Timing        ;
+; Start time                                                                                 ; 0 ns                                                                ; 0 ns          ;
+; Simulation results format                                                                  ; VWF                                                                 ;               ;
+; Vector input source                                                                        ; /home/python/Documents/projects/lab_4/ex5/quartus_test/Waveform.vwf ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On                                                                  ; On            ;
+; Check outputs                                                                              ; Off                                                                 ; Off           ;
+; Report simulation coverage                                                                 ; On                                                                  ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On                                                                  ; On            ;
+; Display missing 1-value coverage report                                                    ; On                                                                  ; On            ;
+; Display missing 0-value coverage report                                                    ; On                                                                  ; On            ;
+; Detect setup and hold time violations                                                      ; Off                                                                 ; Off           ;
+; Detect glitches                                                                            ; Off                                                                 ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off                                                                 ; Off           ;
+; Generate Signal Activity File                                                              ; Off                                                                 ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off                                                                 ; Off           ;
+; Group bus channels in simulation results                                                   ; Off                                                                 ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On                                                                  ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE                                                          ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off                                                                 ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off                                                                 ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto                                                                ; Auto          ;
++--------------------------------------------------------------------------------------------+---------------------------------------------------------------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II 64-Bit to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      10.12 % ;
+; Total nodes checked                                 ; 336          ;
+; Total output ports checked                          ; 336          ;
+; Total output ports with complete 1/0-value coverage ; 34           ;
+; Total output ports with no 1/0-value coverage       ; 302          ;
+; Total output ports with no 1-value coverage         ; 302          ;
+; Total output ports with no 0-value coverage         ; 302          ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                ;
++--------------------+--------------------+------------------+
+; Node Name          ; Output Port Name   ; Output Port Type ;
++--------------------+--------------------+------------------+
+; |design5|Y~0       ; |design5|Y~0       ; out0             ;
+; |design5|S0[0]     ; |design5|S0[0]     ; regout           ;
+; |design5|S3~0      ; |design5|S3~0      ; out              ;
+; |design5|S3~1      ; |design5|S3~1      ; out              ;
+; |design5|S3~2      ; |design5|S3~2      ; out              ;
+; |design5|S3~3      ; |design5|S3~3      ; out              ;
+; |design5|count3~30 ; |design5|count3~30 ; out              ;
+; |design5|count3~31 ; |design5|count3~31 ; out              ;
+; |design5|count3~62 ; |design5|count3~62 ; out              ;
+; |design5|count3~63 ; |design5|count3~63 ; out              ;
+; |design5|S3~4      ; |design5|S3~4      ; out              ;
+; |design5|S3~5      ; |design5|S3~5      ; out              ;
+; |design5|S0~0      ; |design5|S0~0      ; out              ;
+; |design5|count0~30 ; |design5|count0~30 ; out              ;
+; |design5|count0~31 ; |design5|count0~31 ; out              ;
+; |design5|count0~63 ; |design5|count0~63 ; out              ;
+; |design5|S0~1      ; |design5|S0~1      ; out              ;
+; |design5|S3[0]     ; |design5|S3[0]     ; regout           ;
+; |design5|count0[0] ; |design5|count0[0] ; regout           ;
+; |design5|S3[1]     ; |design5|S3[1]     ; regout           ;
+; |design5|count3[0] ; |design5|count3[0] ; regout           ;
+; |design5|count3[1] ; |design5|count3[1] ; regout           ;
+; |design5|clk       ; |design5|clk       ; out              ;
+; |design5|X         ; |design5|X         ; out              ;
+; |design5|s0        ; |design5|s0        ; pin_out          ;
+; |design5|s3_0      ; |design5|s3_0      ; pin_out          ;
+; |design5|s3_1      ; |design5|s3_1      ; pin_out          ;
+; |design5|Y         ; |design5|Y         ; pin_out          ;
+; |design5|Add0~0    ; |design5|Add0~0    ; out0             ;
+; |design5|Add1~0    ; |design5|Add1~0    ; out0             ;
+; |design5|Equal0~0  ; |design5|Equal0~0  ; out0             ;
+; |design5|Equal1~0  ; |design5|Equal1~0  ; out0             ;
+; |design5|Equal2~0  ; |design5|Equal2~0  ; out0             ;
+; |design5|Equal3~0  ; |design5|Equal3~0  ; out0             ;
++--------------------+--------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++--------------------------------------------------------------+
+; Missing 1-Value Coverage                                     ;
++---------------------+---------------------+------------------+
+; Node Name           ; Output Port Name    ; Output Port Type ;
++---------------------+---------------------+------------------+
+; |design5|count3~0   ; |design5|count3~0   ; out              ;
+; |design5|count3~1   ; |design5|count3~1   ; out              ;
+; |design5|count3~2   ; |design5|count3~2   ; out              ;
+; |design5|count3~3   ; |design5|count3~3   ; out              ;
+; |design5|count3~4   ; |design5|count3~4   ; out              ;
+; |design5|count3~5   ; |design5|count3~5   ; out              ;
+; |design5|count3~6   ; |design5|count3~6   ; out              ;
+; |design5|count3~7   ; |design5|count3~7   ; out              ;
+; |design5|count3~8   ; |design5|count3~8   ; out              ;
+; |design5|count3~9   ; |design5|count3~9   ; out              ;
+; |design5|count3~10  ; |design5|count3~10  ; out              ;
+; |design5|count3~11  ; |design5|count3~11  ; out              ;
+; |design5|count3~12  ; |design5|count3~12  ; out              ;
+; |design5|count3~13  ; |design5|count3~13  ; out              ;
+; |design5|count3~14  ; |design5|count3~14  ; out              ;
+; |design5|count3~15  ; |design5|count3~15  ; out              ;
+; |design5|count3~16  ; |design5|count3~16  ; out              ;
+; |design5|count3~17  ; |design5|count3~17  ; out              ;
+; |design5|count3~18  ; |design5|count3~18  ; out              ;
+; |design5|count3~19  ; |design5|count3~19  ; out              ;
+; |design5|count3~20  ; |design5|count3~20  ; out              ;
+; |design5|count3~21  ; |design5|count3~21  ; out              ;
+; |design5|count3~22  ; |design5|count3~22  ; out              ;
+; |design5|count3~23  ; |design5|count3~23  ; out              ;
+; |design5|count3~24  ; |design5|count3~24  ; out              ;
+; |design5|count3~25  ; |design5|count3~25  ; out              ;
+; |design5|count3~26  ; |design5|count3~26  ; out              ;
+; |design5|count3~27  ; |design5|count3~27  ; out              ;
+; |design5|count3~28  ; |design5|count3~28  ; out              ;
+; |design5|count3~29  ; |design5|count3~29  ; out              ;
+; |design5|count3~32  ; |design5|count3~32  ; out              ;
+; |design5|count3~33  ; |design5|count3~33  ; out              ;
+; |design5|count3~34  ; |design5|count3~34  ; out              ;
+; |design5|count3~35  ; |design5|count3~35  ; out              ;
+; |design5|count3~36  ; |design5|count3~36  ; out              ;
+; |design5|count3~37  ; |design5|count3~37  ; out              ;
+; |design5|count3~38  ; |design5|count3~38  ; out              ;
+; |design5|count3~39  ; |design5|count3~39  ; out              ;
+; |design5|count3~40  ; |design5|count3~40  ; out              ;
+; |design5|count3~41  ; |design5|count3~41  ; out              ;
+; |design5|count3~42  ; |design5|count3~42  ; out              ;
+; |design5|count3~43  ; |design5|count3~43  ; out              ;
+; |design5|count3~44  ; |design5|count3~44  ; out              ;
+; |design5|count3~45  ; |design5|count3~45  ; out              ;
+; |design5|count3~46  ; |design5|count3~46  ; out              ;
+; |design5|count3~47  ; |design5|count3~47  ; out              ;
+; |design5|count3~48  ; |design5|count3~48  ; out              ;
+; |design5|count3~49  ; |design5|count3~49  ; out              ;
+; |design5|count3~50  ; |design5|count3~50  ; out              ;
+; |design5|count3~51  ; |design5|count3~51  ; out              ;
+; |design5|count3~52  ; |design5|count3~52  ; out              ;
+; |design5|count3~53  ; |design5|count3~53  ; out              ;
+; |design5|count3~54  ; |design5|count3~54  ; out              ;
+; |design5|count3~55  ; |design5|count3~55  ; out              ;
+; |design5|count3~56  ; |design5|count3~56  ; out              ;
+; |design5|count3~57  ; |design5|count3~57  ; out              ;
+; |design5|count3~58  ; |design5|count3~58  ; out              ;
+; |design5|count3~59  ; |design5|count3~59  ; out              ;
+; |design5|count3~60  ; |design5|count3~60  ; out              ;
+; |design5|count3~61  ; |design5|count3~61  ; out              ;
+; |design5|count0~0   ; |design5|count0~0   ; out              ;
+; |design5|count0~1   ; |design5|count0~1   ; out              ;
+; |design5|count0~2   ; |design5|count0~2   ; out              ;
+; |design5|count0~3   ; |design5|count0~3   ; out              ;
+; |design5|count0~4   ; |design5|count0~4   ; out              ;
+; |design5|count0~5   ; |design5|count0~5   ; out              ;
+; |design5|count0~6   ; |design5|count0~6   ; out              ;
+; |design5|count0~7   ; |design5|count0~7   ; out              ;
+; |design5|count0~8   ; |design5|count0~8   ; out              ;
+; |design5|count0~9   ; |design5|count0~9   ; out              ;
+; |design5|count0~10  ; |design5|count0~10  ; out              ;
+; |design5|count0~11  ; |design5|count0~11  ; out              ;
+; |design5|count0~12  ; |design5|count0~12  ; out              ;
+; |design5|count0~13  ; |design5|count0~13  ; out              ;
+; |design5|count0~14  ; |design5|count0~14  ; out              ;
+; |design5|count0~15  ; |design5|count0~15  ; out              ;
+; |design5|count0~16  ; |design5|count0~16  ; out              ;
+; |design5|count0~17  ; |design5|count0~17  ; out              ;
+; |design5|count0~18  ; |design5|count0~18  ; out              ;
+; |design5|count0~19  ; |design5|count0~19  ; out              ;
+; |design5|count0~20  ; |design5|count0~20  ; out              ;
+; |design5|count0~21  ; |design5|count0~21  ; out              ;
+; |design5|count0~22  ; |design5|count0~22  ; out              ;
+; |design5|count0~23  ; |design5|count0~23  ; out              ;
+; |design5|count0~24  ; |design5|count0~24  ; out              ;
+; |design5|count0~25  ; |design5|count0~25  ; out              ;
+; |design5|count0~26  ; |design5|count0~26  ; out              ;
+; |design5|count0~27  ; |design5|count0~27  ; out              ;
+; |design5|count0~28  ; |design5|count0~28  ; out              ;
+; |design5|count0~29  ; |design5|count0~29  ; out              ;
+; |design5|count0~32  ; |design5|count0~32  ; out              ;
+; |design5|count0~33  ; |design5|count0~33  ; out              ;
+; |design5|count0~34  ; |design5|count0~34  ; out              ;
+; |design5|count0~35  ; |design5|count0~35  ; out              ;
+; |design5|count0~36  ; |design5|count0~36  ; out              ;
+; |design5|count0~37  ; |design5|count0~37  ; out              ;
+; |design5|count0~38  ; |design5|count0~38  ; out              ;
+; |design5|count0~39  ; |design5|count0~39  ; out              ;
+; |design5|count0~40  ; |design5|count0~40  ; out              ;
+; |design5|count0~41  ; |design5|count0~41  ; out              ;
+; |design5|count0~42  ; |design5|count0~42  ; out              ;
+; |design5|count0~43  ; |design5|count0~43  ; out              ;
+; |design5|count0~44  ; |design5|count0~44  ; out              ;
+; |design5|count0~45  ; |design5|count0~45  ; out              ;
+; |design5|count0~46  ; |design5|count0~46  ; out              ;
+; |design5|count0~47  ; |design5|count0~47  ; out              ;
+; |design5|count0~48  ; |design5|count0~48  ; out              ;
+; |design5|count0~49  ; |design5|count0~49  ; out              ;
+; |design5|count0~50  ; |design5|count0~50  ; out              ;
+; |design5|count0~51  ; |design5|count0~51  ; out              ;
+; |design5|count0~52  ; |design5|count0~52  ; out              ;
+; |design5|count0~53  ; |design5|count0~53  ; out              ;
+; |design5|count0~54  ; |design5|count0~54  ; out              ;
+; |design5|count0~55  ; |design5|count0~55  ; out              ;
+; |design5|count0~56  ; |design5|count0~56  ; out              ;
+; |design5|count0~57  ; |design5|count0~57  ; out              ;
+; |design5|count0~58  ; |design5|count0~58  ; out              ;
+; |design5|count0~59  ; |design5|count0~59  ; out              ;
+; |design5|count0~60  ; |design5|count0~60  ; out              ;
+; |design5|count0~61  ; |design5|count0~61  ; out              ;
+; |design5|count0~62  ; |design5|count0~62  ; out              ;
+; |design5|count0[1]  ; |design5|count0[1]  ; regout           ;
+; |design5|count0[2]  ; |design5|count0[2]  ; regout           ;
+; |design5|count0[3]  ; |design5|count0[3]  ; regout           ;
+; |design5|count0[4]  ; |design5|count0[4]  ; regout           ;
+; |design5|count0[5]  ; |design5|count0[5]  ; regout           ;
+; |design5|count0[6]  ; |design5|count0[6]  ; regout           ;
+; |design5|count0[7]  ; |design5|count0[7]  ; regout           ;
+; |design5|count0[8]  ; |design5|count0[8]  ; regout           ;
+; |design5|count0[9]  ; |design5|count0[9]  ; regout           ;
+; |design5|count0[10] ; |design5|count0[10] ; regout           ;
+; |design5|count0[11] ; |design5|count0[11] ; regout           ;
+; |design5|count0[12] ; |design5|count0[12] ; regout           ;
+; |design5|count0[13] ; |design5|count0[13] ; regout           ;
+; |design5|count0[14] ; |design5|count0[14] ; regout           ;
+; |design5|count0[15] ; |design5|count0[15] ; regout           ;
+; |design5|count0[16] ; |design5|count0[16] ; regout           ;
+; |design5|count0[17] ; |design5|count0[17] ; regout           ;
+; |design5|count0[18] ; |design5|count0[18] ; regout           ;
+; |design5|count0[19] ; |design5|count0[19] ; regout           ;
+; |design5|count0[20] ; |design5|count0[20] ; regout           ;
+; |design5|count0[21] ; |design5|count0[21] ; regout           ;
+; |design5|count0[22] ; |design5|count0[22] ; regout           ;
+; |design5|count0[23] ; |design5|count0[23] ; regout           ;
+; |design5|count0[24] ; |design5|count0[24] ; regout           ;
+; |design5|count0[25] ; |design5|count0[25] ; regout           ;
+; |design5|count0[26] ; |design5|count0[26] ; regout           ;
+; |design5|count0[27] ; |design5|count0[27] ; regout           ;
+; |design5|count0[28] ; |design5|count0[28] ; regout           ;
+; |design5|count0[29] ; |design5|count0[29] ; regout           ;
+; |design5|count0[30] ; |design5|count0[30] ; regout           ;
+; |design5|count0[31] ; |design5|count0[31] ; regout           ;
+; |design5|count3[2]  ; |design5|count3[2]  ; regout           ;
+; |design5|count3[3]  ; |design5|count3[3]  ; regout           ;
+; |design5|count3[4]  ; |design5|count3[4]  ; regout           ;
+; |design5|count3[5]  ; |design5|count3[5]  ; regout           ;
+; |design5|count3[6]  ; |design5|count3[6]  ; regout           ;
+; |design5|count3[7]  ; |design5|count3[7]  ; regout           ;
+; |design5|count3[8]  ; |design5|count3[8]  ; regout           ;
+; |design5|count3[9]  ; |design5|count3[9]  ; regout           ;
+; |design5|count3[10] ; |design5|count3[10] ; regout           ;
+; |design5|count3[11] ; |design5|count3[11] ; regout           ;
+; |design5|count3[12] ; |design5|count3[12] ; regout           ;
+; |design5|count3[13] ; |design5|count3[13] ; regout           ;
+; |design5|count3[14] ; |design5|count3[14] ; regout           ;
+; |design5|count3[15] ; |design5|count3[15] ; regout           ;
+; |design5|count3[16] ; |design5|count3[16] ; regout           ;
+; |design5|count3[17] ; |design5|count3[17] ; regout           ;
+; |design5|count3[18] ; |design5|count3[18] ; regout           ;
+; |design5|count3[19] ; |design5|count3[19] ; regout           ;
+; |design5|count3[20] ; |design5|count3[20] ; regout           ;
+; |design5|count3[21] ; |design5|count3[21] ; regout           ;
+; |design5|count3[22] ; |design5|count3[22] ; regout           ;
+; |design5|count3[23] ; |design5|count3[23] ; regout           ;
+; |design5|count3[24] ; |design5|count3[24] ; regout           ;
+; |design5|count3[25] ; |design5|count3[25] ; regout           ;
+; |design5|count3[26] ; |design5|count3[26] ; regout           ;
+; |design5|count3[27] ; |design5|count3[27] ; regout           ;
+; |design5|count3[28] ; |design5|count3[28] ; regout           ;
+; |design5|count3[29] ; |design5|count3[29] ; regout           ;
+; |design5|count3[30] ; |design5|count3[30] ; regout           ;
+; |design5|count3[31] ; |design5|count3[31] ; regout           ;
+; |design5|Add0~1     ; |design5|Add0~1     ; out0             ;
+; |design5|Add0~2     ; |design5|Add0~2     ; out0             ;
+; |design5|Add0~3     ; |design5|Add0~3     ; out0             ;
+; |design5|Add0~4     ; |design5|Add0~4     ; out0             ;
+; |design5|Add0~5     ; |design5|Add0~5     ; out0             ;
+; |design5|Add0~6     ; |design5|Add0~6     ; out0             ;
+; |design5|Add0~7     ; |design5|Add0~7     ; out0             ;
+; |design5|Add0~8     ; |design5|Add0~8     ; out0             ;
+; |design5|Add0~9     ; |design5|Add0~9     ; out0             ;
+; |design5|Add0~10    ; |design5|Add0~10    ; out0             ;
+; |design5|Add0~11    ; |design5|Add0~11    ; out0             ;
+; |design5|Add0~12    ; |design5|Add0~12    ; out0             ;
+; |design5|Add0~13    ; |design5|Add0~13    ; out0             ;
+; |design5|Add0~14    ; |design5|Add0~14    ; out0             ;
+; |design5|Add0~15    ; |design5|Add0~15    ; out0             ;
+; |design5|Add0~16    ; |design5|Add0~16    ; out0             ;
+; |design5|Add0~17    ; |design5|Add0~17    ; out0             ;
+; |design5|Add0~18    ; |design5|Add0~18    ; out0             ;
+; |design5|Add0~19    ; |design5|Add0~19    ; out0             ;
+; |design5|Add0~20    ; |design5|Add0~20    ; out0             ;
+; |design5|Add0~21    ; |design5|Add0~21    ; out0             ;
+; |design5|Add0~22    ; |design5|Add0~22    ; out0             ;
+; |design5|Add0~23    ; |design5|Add0~23    ; out0             ;
+; |design5|Add0~24    ; |design5|Add0~24    ; out0             ;
+; |design5|Add0~25    ; |design5|Add0~25    ; out0             ;
+; |design5|Add0~26    ; |design5|Add0~26    ; out0             ;
+; |design5|Add0~27    ; |design5|Add0~27    ; out0             ;
+; |design5|Add0~28    ; |design5|Add0~28    ; out0             ;
+; |design5|Add0~29    ; |design5|Add0~29    ; out0             ;
+; |design5|Add0~30    ; |design5|Add0~30    ; out0             ;
+; |design5|Add0~31    ; |design5|Add0~31    ; out0             ;
+; |design5|Add0~32    ; |design5|Add0~32    ; out0             ;
+; |design5|Add0~33    ; |design5|Add0~33    ; out0             ;
+; |design5|Add0~34    ; |design5|Add0~34    ; out0             ;
+; |design5|Add0~35    ; |design5|Add0~35    ; out0             ;
+; |design5|Add0~36    ; |design5|Add0~36    ; out0             ;
+; |design5|Add0~37    ; |design5|Add0~37    ; out0             ;
+; |design5|Add0~38    ; |design5|Add0~38    ; out0             ;
+; |design5|Add0~39    ; |design5|Add0~39    ; out0             ;
+; |design5|Add0~40    ; |design5|Add0~40    ; out0             ;
+; |design5|Add0~41    ; |design5|Add0~41    ; out0             ;
+; |design5|Add0~42    ; |design5|Add0~42    ; out0             ;
+; |design5|Add0~43    ; |design5|Add0~43    ; out0             ;
+; |design5|Add0~44    ; |design5|Add0~44    ; out0             ;
+; |design5|Add0~45    ; |design5|Add0~45    ; out0             ;
+; |design5|Add0~46    ; |design5|Add0~46    ; out0             ;
+; |design5|Add0~47    ; |design5|Add0~47    ; out0             ;
+; |design5|Add0~48    ; |design5|Add0~48    ; out0             ;
+; |design5|Add0~49    ; |design5|Add0~49    ; out0             ;
+; |design5|Add0~50    ; |design5|Add0~50    ; out0             ;
+; |design5|Add0~51    ; |design5|Add0~51    ; out0             ;
+; |design5|Add0~52    ; |design5|Add0~52    ; out0             ;
+; |design5|Add0~53    ; |design5|Add0~53    ; out0             ;
+; |design5|Add0~54    ; |design5|Add0~54    ; out0             ;
+; |design5|Add0~55    ; |design5|Add0~55    ; out0             ;
+; |design5|Add0~56    ; |design5|Add0~56    ; out0             ;
+; |design5|Add0~57    ; |design5|Add0~57    ; out0             ;
+; |design5|Add0~58    ; |design5|Add0~58    ; out0             ;
+; |design5|Add0~59    ; |design5|Add0~59    ; out0             ;
+; |design5|Add0~60    ; |design5|Add0~60    ; out0             ;
+; |design5|Add1~1     ; |design5|Add1~1     ; out0             ;
+; |design5|Add1~2     ; |design5|Add1~2     ; out0             ;
+; |design5|Add1~3     ; |design5|Add1~3     ; out0             ;
+; |design5|Add1~4     ; |design5|Add1~4     ; out0             ;
+; |design5|Add1~5     ; |design5|Add1~5     ; out0             ;
+; |design5|Add1~6     ; |design5|Add1~6     ; out0             ;
+; |design5|Add1~7     ; |design5|Add1~7     ; out0             ;
+; |design5|Add1~8     ; |design5|Add1~8     ; out0             ;
+; |design5|Add1~9     ; |design5|Add1~9     ; out0             ;
+; |design5|Add1~10    ; |design5|Add1~10    ; out0             ;
+; |design5|Add1~11    ; |design5|Add1~11    ; out0             ;
+; |design5|Add1~12    ; |design5|Add1~12    ; out0             ;
+; |design5|Add1~13    ; |design5|Add1~13    ; out0             ;
+; |design5|Add1~14    ; |design5|Add1~14    ; out0             ;
+; |design5|Add1~15    ; |design5|Add1~15    ; out0             ;
+; |design5|Add1~16    ; |design5|Add1~16    ; out0             ;
+; |design5|Add1~17    ; |design5|Add1~17    ; out0             ;
+; |design5|Add1~18    ; |design5|Add1~18    ; out0             ;
+; |design5|Add1~19    ; |design5|Add1~19    ; out0             ;
+; |design5|Add1~20    ; |design5|Add1~20    ; out0             ;
+; |design5|Add1~21    ; |design5|Add1~21    ; out0             ;
+; |design5|Add1~22    ; |design5|Add1~22    ; out0             ;
+; |design5|Add1~23    ; |design5|Add1~23    ; out0             ;
+; |design5|Add1~24    ; |design5|Add1~24    ; out0             ;
+; |design5|Add1~25    ; |design5|Add1~25    ; out0             ;
+; |design5|Add1~26    ; |design5|Add1~26    ; out0             ;
+; |design5|Add1~27    ; |design5|Add1~27    ; out0             ;
+; |design5|Add1~28    ; |design5|Add1~28    ; out0             ;
+; |design5|Add1~29    ; |design5|Add1~29    ; out0             ;
+; |design5|Add1~30    ; |design5|Add1~30    ; out0             ;
+; |design5|Add1~31    ; |design5|Add1~31    ; out0             ;
+; |design5|Add1~32    ; |design5|Add1~32    ; out0             ;
+; |design5|Add1~33    ; |design5|Add1~33    ; out0             ;
+; |design5|Add1~34    ; |design5|Add1~34    ; out0             ;
+; |design5|Add1~35    ; |design5|Add1~35    ; out0             ;
+; |design5|Add1~36    ; |design5|Add1~36    ; out0             ;
+; |design5|Add1~37    ; |design5|Add1~37    ; out0             ;
+; |design5|Add1~38    ; |design5|Add1~38    ; out0             ;
+; |design5|Add1~39    ; |design5|Add1~39    ; out0             ;
+; |design5|Add1~40    ; |design5|Add1~40    ; out0             ;
+; |design5|Add1~41    ; |design5|Add1~41    ; out0             ;
+; |design5|Add1~42    ; |design5|Add1~42    ; out0             ;
+; |design5|Add1~43    ; |design5|Add1~43    ; out0             ;
+; |design5|Add1~44    ; |design5|Add1~44    ; out0             ;
+; |design5|Add1~45    ; |design5|Add1~45    ; out0             ;
+; |design5|Add1~46    ; |design5|Add1~46    ; out0             ;
+; |design5|Add1~47    ; |design5|Add1~47    ; out0             ;
+; |design5|Add1~48    ; |design5|Add1~48    ; out0             ;
+; |design5|Add1~49    ; |design5|Add1~49    ; out0             ;
+; |design5|Add1~50    ; |design5|Add1~50    ; out0             ;
+; |design5|Add1~51    ; |design5|Add1~51    ; out0             ;
+; |design5|Add1~52    ; |design5|Add1~52    ; out0             ;
+; |design5|Add1~53    ; |design5|Add1~53    ; out0             ;
+; |design5|Add1~54    ; |design5|Add1~54    ; out0             ;
+; |design5|Add1~55    ; |design5|Add1~55    ; out0             ;
+; |design5|Add1~56    ; |design5|Add1~56    ; out0             ;
+; |design5|Add1~57    ; |design5|Add1~57    ; out0             ;
+; |design5|Add1~58    ; |design5|Add1~58    ; out0             ;
+; |design5|Add1~59    ; |design5|Add1~59    ; out0             ;
+; |design5|Add1~60    ; |design5|Add1~60    ; out0             ;
++---------------------+---------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++--------------------------------------------------------------+
+; Missing 0-Value Coverage                                     ;
++---------------------+---------------------+------------------+
+; Node Name           ; Output Port Name    ; Output Port Type ;
++---------------------+---------------------+------------------+
+; |design5|count3~0   ; |design5|count3~0   ; out              ;
+; |design5|count3~1   ; |design5|count3~1   ; out              ;
+; |design5|count3~2   ; |design5|count3~2   ; out              ;
+; |design5|count3~3   ; |design5|count3~3   ; out              ;
+; |design5|count3~4   ; |design5|count3~4   ; out              ;
+; |design5|count3~5   ; |design5|count3~5   ; out              ;
+; |design5|count3~6   ; |design5|count3~6   ; out              ;
+; |design5|count3~7   ; |design5|count3~7   ; out              ;
+; |design5|count3~8   ; |design5|count3~8   ; out              ;
+; |design5|count3~9   ; |design5|count3~9   ; out              ;
+; |design5|count3~10  ; |design5|count3~10  ; out              ;
+; |design5|count3~11  ; |design5|count3~11  ; out              ;
+; |design5|count3~12  ; |design5|count3~12  ; out              ;
+; |design5|count3~13  ; |design5|count3~13  ; out              ;
+; |design5|count3~14  ; |design5|count3~14  ; out              ;
+; |design5|count3~15  ; |design5|count3~15  ; out              ;
+; |design5|count3~16  ; |design5|count3~16  ; out              ;
+; |design5|count3~17  ; |design5|count3~17  ; out              ;
+; |design5|count3~18  ; |design5|count3~18  ; out              ;
+; |design5|count3~19  ; |design5|count3~19  ; out              ;
+; |design5|count3~20  ; |design5|count3~20  ; out              ;
+; |design5|count3~21  ; |design5|count3~21  ; out              ;
+; |design5|count3~22  ; |design5|count3~22  ; out              ;
+; |design5|count3~23  ; |design5|count3~23  ; out              ;
+; |design5|count3~24  ; |design5|count3~24  ; out              ;
+; |design5|count3~25  ; |design5|count3~25  ; out              ;
+; |design5|count3~26  ; |design5|count3~26  ; out              ;
+; |design5|count3~27  ; |design5|count3~27  ; out              ;
+; |design5|count3~28  ; |design5|count3~28  ; out              ;
+; |design5|count3~29  ; |design5|count3~29  ; out              ;
+; |design5|count3~32  ; |design5|count3~32  ; out              ;
+; |design5|count3~33  ; |design5|count3~33  ; out              ;
+; |design5|count3~34  ; |design5|count3~34  ; out              ;
+; |design5|count3~35  ; |design5|count3~35  ; out              ;
+; |design5|count3~36  ; |design5|count3~36  ; out              ;
+; |design5|count3~37  ; |design5|count3~37  ; out              ;
+; |design5|count3~38  ; |design5|count3~38  ; out              ;
+; |design5|count3~39  ; |design5|count3~39  ; out              ;
+; |design5|count3~40  ; |design5|count3~40  ; out              ;
+; |design5|count3~41  ; |design5|count3~41  ; out              ;
+; |design5|count3~42  ; |design5|count3~42  ; out              ;
+; |design5|count3~43  ; |design5|count3~43  ; out              ;
+; |design5|count3~44  ; |design5|count3~44  ; out              ;
+; |design5|count3~45  ; |design5|count3~45  ; out              ;
+; |design5|count3~46  ; |design5|count3~46  ; out              ;
+; |design5|count3~47  ; |design5|count3~47  ; out              ;
+; |design5|count3~48  ; |design5|count3~48  ; out              ;
+; |design5|count3~49  ; |design5|count3~49  ; out              ;
+; |design5|count3~50  ; |design5|count3~50  ; out              ;
+; |design5|count3~51  ; |design5|count3~51  ; out              ;
+; |design5|count3~52  ; |design5|count3~52  ; out              ;
+; |design5|count3~53  ; |design5|count3~53  ; out              ;
+; |design5|count3~54  ; |design5|count3~54  ; out              ;
+; |design5|count3~55  ; |design5|count3~55  ; out              ;
+; |design5|count3~56  ; |design5|count3~56  ; out              ;
+; |design5|count3~57  ; |design5|count3~57  ; out              ;
+; |design5|count3~58  ; |design5|count3~58  ; out              ;
+; |design5|count3~59  ; |design5|count3~59  ; out              ;
+; |design5|count3~60  ; |design5|count3~60  ; out              ;
+; |design5|count3~61  ; |design5|count3~61  ; out              ;
+; |design5|count0~0   ; |design5|count0~0   ; out              ;
+; |design5|count0~1   ; |design5|count0~1   ; out              ;
+; |design5|count0~2   ; |design5|count0~2   ; out              ;
+; |design5|count0~3   ; |design5|count0~3   ; out              ;
+; |design5|count0~4   ; |design5|count0~4   ; out              ;
+; |design5|count0~5   ; |design5|count0~5   ; out              ;
+; |design5|count0~6   ; |design5|count0~6   ; out              ;
+; |design5|count0~7   ; |design5|count0~7   ; out              ;
+; |design5|count0~8   ; |design5|count0~8   ; out              ;
+; |design5|count0~9   ; |design5|count0~9   ; out              ;
+; |design5|count0~10  ; |design5|count0~10  ; out              ;
+; |design5|count0~11  ; |design5|count0~11  ; out              ;
+; |design5|count0~12  ; |design5|count0~12  ; out              ;
+; |design5|count0~13  ; |design5|count0~13  ; out              ;
+; |design5|count0~14  ; |design5|count0~14  ; out              ;
+; |design5|count0~15  ; |design5|count0~15  ; out              ;
+; |design5|count0~16  ; |design5|count0~16  ; out              ;
+; |design5|count0~17  ; |design5|count0~17  ; out              ;
+; |design5|count0~18  ; |design5|count0~18  ; out              ;
+; |design5|count0~19  ; |design5|count0~19  ; out              ;
+; |design5|count0~20  ; |design5|count0~20  ; out              ;
+; |design5|count0~21  ; |design5|count0~21  ; out              ;
+; |design5|count0~22  ; |design5|count0~22  ; out              ;
+; |design5|count0~23  ; |design5|count0~23  ; out              ;
+; |design5|count0~24  ; |design5|count0~24  ; out              ;
+; |design5|count0~25  ; |design5|count0~25  ; out              ;
+; |design5|count0~26  ; |design5|count0~26  ; out              ;
+; |design5|count0~27  ; |design5|count0~27  ; out              ;
+; |design5|count0~28  ; |design5|count0~28  ; out              ;
+; |design5|count0~29  ; |design5|count0~29  ; out              ;
+; |design5|count0~32  ; |design5|count0~32  ; out              ;
+; |design5|count0~33  ; |design5|count0~33  ; out              ;
+; |design5|count0~34  ; |design5|count0~34  ; out              ;
+; |design5|count0~35  ; |design5|count0~35  ; out              ;
+; |design5|count0~36  ; |design5|count0~36  ; out              ;
+; |design5|count0~37  ; |design5|count0~37  ; out              ;
+; |design5|count0~38  ; |design5|count0~38  ; out              ;
+; |design5|count0~39  ; |design5|count0~39  ; out              ;
+; |design5|count0~40  ; |design5|count0~40  ; out              ;
+; |design5|count0~41  ; |design5|count0~41  ; out              ;
+; |design5|count0~42  ; |design5|count0~42  ; out              ;
+; |design5|count0~43  ; |design5|count0~43  ; out              ;
+; |design5|count0~44  ; |design5|count0~44  ; out              ;
+; |design5|count0~45  ; |design5|count0~45  ; out              ;
+; |design5|count0~46  ; |design5|count0~46  ; out              ;
+; |design5|count0~47  ; |design5|count0~47  ; out              ;
+; |design5|count0~48  ; |design5|count0~48  ; out              ;
+; |design5|count0~49  ; |design5|count0~49  ; out              ;
+; |design5|count0~50  ; |design5|count0~50  ; out              ;
+; |design5|count0~51  ; |design5|count0~51  ; out              ;
+; |design5|count0~52  ; |design5|count0~52  ; out              ;
+; |design5|count0~53  ; |design5|count0~53  ; out              ;
+; |design5|count0~54  ; |design5|count0~54  ; out              ;
+; |design5|count0~55  ; |design5|count0~55  ; out              ;
+; |design5|count0~56  ; |design5|count0~56  ; out              ;
+; |design5|count0~57  ; |design5|count0~57  ; out              ;
+; |design5|count0~58  ; |design5|count0~58  ; out              ;
+; |design5|count0~59  ; |design5|count0~59  ; out              ;
+; |design5|count0~60  ; |design5|count0~60  ; out              ;
+; |design5|count0~61  ; |design5|count0~61  ; out              ;
+; |design5|count0~62  ; |design5|count0~62  ; out              ;
+; |design5|count0[1]  ; |design5|count0[1]  ; regout           ;
+; |design5|count0[2]  ; |design5|count0[2]  ; regout           ;
+; |design5|count0[3]  ; |design5|count0[3]  ; regout           ;
+; |design5|count0[4]  ; |design5|count0[4]  ; regout           ;
+; |design5|count0[5]  ; |design5|count0[5]  ; regout           ;
+; |design5|count0[6]  ; |design5|count0[6]  ; regout           ;
+; |design5|count0[7]  ; |design5|count0[7]  ; regout           ;
+; |design5|count0[8]  ; |design5|count0[8]  ; regout           ;
+; |design5|count0[9]  ; |design5|count0[9]  ; regout           ;
+; |design5|count0[10] ; |design5|count0[10] ; regout           ;
+; |design5|count0[11] ; |design5|count0[11] ; regout           ;
+; |design5|count0[12] ; |design5|count0[12] ; regout           ;
+; |design5|count0[13] ; |design5|count0[13] ; regout           ;
+; |design5|count0[14] ; |design5|count0[14] ; regout           ;
+; |design5|count0[15] ; |design5|count0[15] ; regout           ;
+; |design5|count0[16] ; |design5|count0[16] ; regout           ;
+; |design5|count0[17] ; |design5|count0[17] ; regout           ;
+; |design5|count0[18] ; |design5|count0[18] ; regout           ;
+; |design5|count0[19] ; |design5|count0[19] ; regout           ;
+; |design5|count0[20] ; |design5|count0[20] ; regout           ;
+; |design5|count0[21] ; |design5|count0[21] ; regout           ;
+; |design5|count0[22] ; |design5|count0[22] ; regout           ;
+; |design5|count0[23] ; |design5|count0[23] ; regout           ;
+; |design5|count0[24] ; |design5|count0[24] ; regout           ;
+; |design5|count0[25] ; |design5|count0[25] ; regout           ;
+; |design5|count0[26] ; |design5|count0[26] ; regout           ;
+; |design5|count0[27] ; |design5|count0[27] ; regout           ;
+; |design5|count0[28] ; |design5|count0[28] ; regout           ;
+; |design5|count0[29] ; |design5|count0[29] ; regout           ;
+; |design5|count0[30] ; |design5|count0[30] ; regout           ;
+; |design5|count0[31] ; |design5|count0[31] ; regout           ;
+; |design5|count3[2]  ; |design5|count3[2]  ; regout           ;
+; |design5|count3[3]  ; |design5|count3[3]  ; regout           ;
+; |design5|count3[4]  ; |design5|count3[4]  ; regout           ;
+; |design5|count3[5]  ; |design5|count3[5]  ; regout           ;
+; |design5|count3[6]  ; |design5|count3[6]  ; regout           ;
+; |design5|count3[7]  ; |design5|count3[7]  ; regout           ;
+; |design5|count3[8]  ; |design5|count3[8]  ; regout           ;
+; |design5|count3[9]  ; |design5|count3[9]  ; regout           ;
+; |design5|count3[10] ; |design5|count3[10] ; regout           ;
+; |design5|count3[11] ; |design5|count3[11] ; regout           ;
+; |design5|count3[12] ; |design5|count3[12] ; regout           ;
+; |design5|count3[13] ; |design5|count3[13] ; regout           ;
+; |design5|count3[14] ; |design5|count3[14] ; regout           ;
+; |design5|count3[15] ; |design5|count3[15] ; regout           ;
+; |design5|count3[16] ; |design5|count3[16] ; regout           ;
+; |design5|count3[17] ; |design5|count3[17] ; regout           ;
+; |design5|count3[18] ; |design5|count3[18] ; regout           ;
+; |design5|count3[19] ; |design5|count3[19] ; regout           ;
+; |design5|count3[20] ; |design5|count3[20] ; regout           ;
+; |design5|count3[21] ; |design5|count3[21] ; regout           ;
+; |design5|count3[22] ; |design5|count3[22] ; regout           ;
+; |design5|count3[23] ; |design5|count3[23] ; regout           ;
+; |design5|count3[24] ; |design5|count3[24] ; regout           ;
+; |design5|count3[25] ; |design5|count3[25] ; regout           ;
+; |design5|count3[26] ; |design5|count3[26] ; regout           ;
+; |design5|count3[27] ; |design5|count3[27] ; regout           ;
+; |design5|count3[28] ; |design5|count3[28] ; regout           ;
+; |design5|count3[29] ; |design5|count3[29] ; regout           ;
+; |design5|count3[30] ; |design5|count3[30] ; regout           ;
+; |design5|count3[31] ; |design5|count3[31] ; regout           ;
+; |design5|Add0~1     ; |design5|Add0~1     ; out0             ;
+; |design5|Add0~2     ; |design5|Add0~2     ; out0             ;
+; |design5|Add0~3     ; |design5|Add0~3     ; out0             ;
+; |design5|Add0~4     ; |design5|Add0~4     ; out0             ;
+; |design5|Add0~5     ; |design5|Add0~5     ; out0             ;
+; |design5|Add0~6     ; |design5|Add0~6     ; out0             ;
+; |design5|Add0~7     ; |design5|Add0~7     ; out0             ;
+; |design5|Add0~8     ; |design5|Add0~8     ; out0             ;
+; |design5|Add0~9     ; |design5|Add0~9     ; out0             ;
+; |design5|Add0~10    ; |design5|Add0~10    ; out0             ;
+; |design5|Add0~11    ; |design5|Add0~11    ; out0             ;
+; |design5|Add0~12    ; |design5|Add0~12    ; out0             ;
+; |design5|Add0~13    ; |design5|Add0~13    ; out0             ;
+; |design5|Add0~14    ; |design5|Add0~14    ; out0             ;
+; |design5|Add0~15    ; |design5|Add0~15    ; out0             ;
+; |design5|Add0~16    ; |design5|Add0~16    ; out0             ;
+; |design5|Add0~17    ; |design5|Add0~17    ; out0             ;
+; |design5|Add0~18    ; |design5|Add0~18    ; out0             ;
+; |design5|Add0~19    ; |design5|Add0~19    ; out0             ;
+; |design5|Add0~20    ; |design5|Add0~20    ; out0             ;
+; |design5|Add0~21    ; |design5|Add0~21    ; out0             ;
+; |design5|Add0~22    ; |design5|Add0~22    ; out0             ;
+; |design5|Add0~23    ; |design5|Add0~23    ; out0             ;
+; |design5|Add0~24    ; |design5|Add0~24    ; out0             ;
+; |design5|Add0~25    ; |design5|Add0~25    ; out0             ;
+; |design5|Add0~26    ; |design5|Add0~26    ; out0             ;
+; |design5|Add0~27    ; |design5|Add0~27    ; out0             ;
+; |design5|Add0~28    ; |design5|Add0~28    ; out0             ;
+; |design5|Add0~29    ; |design5|Add0~29    ; out0             ;
+; |design5|Add0~30    ; |design5|Add0~30    ; out0             ;
+; |design5|Add0~31    ; |design5|Add0~31    ; out0             ;
+; |design5|Add0~32    ; |design5|Add0~32    ; out0             ;
+; |design5|Add0~33    ; |design5|Add0~33    ; out0             ;
+; |design5|Add0~34    ; |design5|Add0~34    ; out0             ;
+; |design5|Add0~35    ; |design5|Add0~35    ; out0             ;
+; |design5|Add0~36    ; |design5|Add0~36    ; out0             ;
+; |design5|Add0~37    ; |design5|Add0~37    ; out0             ;
+; |design5|Add0~38    ; |design5|Add0~38    ; out0             ;
+; |design5|Add0~39    ; |design5|Add0~39    ; out0             ;
+; |design5|Add0~40    ; |design5|Add0~40    ; out0             ;
+; |design5|Add0~41    ; |design5|Add0~41    ; out0             ;
+; |design5|Add0~42    ; |design5|Add0~42    ; out0             ;
+; |design5|Add0~43    ; |design5|Add0~43    ; out0             ;
+; |design5|Add0~44    ; |design5|Add0~44    ; out0             ;
+; |design5|Add0~45    ; |design5|Add0~45    ; out0             ;
+; |design5|Add0~46    ; |design5|Add0~46    ; out0             ;
+; |design5|Add0~47    ; |design5|Add0~47    ; out0             ;
+; |design5|Add0~48    ; |design5|Add0~48    ; out0             ;
+; |design5|Add0~49    ; |design5|Add0~49    ; out0             ;
+; |design5|Add0~50    ; |design5|Add0~50    ; out0             ;
+; |design5|Add0~51    ; |design5|Add0~51    ; out0             ;
+; |design5|Add0~52    ; |design5|Add0~52    ; out0             ;
+; |design5|Add0~53    ; |design5|Add0~53    ; out0             ;
+; |design5|Add0~54    ; |design5|Add0~54    ; out0             ;
+; |design5|Add0~55    ; |design5|Add0~55    ; out0             ;
+; |design5|Add0~56    ; |design5|Add0~56    ; out0             ;
+; |design5|Add0~57    ; |design5|Add0~57    ; out0             ;
+; |design5|Add0~58    ; |design5|Add0~58    ; out0             ;
+; |design5|Add0~59    ; |design5|Add0~59    ; out0             ;
+; |design5|Add0~60    ; |design5|Add0~60    ; out0             ;
+; |design5|Add1~1     ; |design5|Add1~1     ; out0             ;
+; |design5|Add1~2     ; |design5|Add1~2     ; out0             ;
+; |design5|Add1~3     ; |design5|Add1~3     ; out0             ;
+; |design5|Add1~4     ; |design5|Add1~4     ; out0             ;
+; |design5|Add1~5     ; |design5|Add1~5     ; out0             ;
+; |design5|Add1~6     ; |design5|Add1~6     ; out0             ;
+; |design5|Add1~7     ; |design5|Add1~7     ; out0             ;
+; |design5|Add1~8     ; |design5|Add1~8     ; out0             ;
+; |design5|Add1~9     ; |design5|Add1~9     ; out0             ;
+; |design5|Add1~10    ; |design5|Add1~10    ; out0             ;
+; |design5|Add1~11    ; |design5|Add1~11    ; out0             ;
+; |design5|Add1~12    ; |design5|Add1~12    ; out0             ;
+; |design5|Add1~13    ; |design5|Add1~13    ; out0             ;
+; |design5|Add1~14    ; |design5|Add1~14    ; out0             ;
+; |design5|Add1~15    ; |design5|Add1~15    ; out0             ;
+; |design5|Add1~16    ; |design5|Add1~16    ; out0             ;
+; |design5|Add1~17    ; |design5|Add1~17    ; out0             ;
+; |design5|Add1~18    ; |design5|Add1~18    ; out0             ;
+; |design5|Add1~19    ; |design5|Add1~19    ; out0             ;
+; |design5|Add1~20    ; |design5|Add1~20    ; out0             ;
+; |design5|Add1~21    ; |design5|Add1~21    ; out0             ;
+; |design5|Add1~22    ; |design5|Add1~22    ; out0             ;
+; |design5|Add1~23    ; |design5|Add1~23    ; out0             ;
+; |design5|Add1~24    ; |design5|Add1~24    ; out0             ;
+; |design5|Add1~25    ; |design5|Add1~25    ; out0             ;
+; |design5|Add1~26    ; |design5|Add1~26    ; out0             ;
+; |design5|Add1~27    ; |design5|Add1~27    ; out0             ;
+; |design5|Add1~28    ; |design5|Add1~28    ; out0             ;
+; |design5|Add1~29    ; |design5|Add1~29    ; out0             ;
+; |design5|Add1~30    ; |design5|Add1~30    ; out0             ;
+; |design5|Add1~31    ; |design5|Add1~31    ; out0             ;
+; |design5|Add1~32    ; |design5|Add1~32    ; out0             ;
+; |design5|Add1~33    ; |design5|Add1~33    ; out0             ;
+; |design5|Add1~34    ; |design5|Add1~34    ; out0             ;
+; |design5|Add1~35    ; |design5|Add1~35    ; out0             ;
+; |design5|Add1~36    ; |design5|Add1~36    ; out0             ;
+; |design5|Add1~37    ; |design5|Add1~37    ; out0             ;
+; |design5|Add1~38    ; |design5|Add1~38    ; out0             ;
+; |design5|Add1~39    ; |design5|Add1~39    ; out0             ;
+; |design5|Add1~40    ; |design5|Add1~40    ; out0             ;
+; |design5|Add1~41    ; |design5|Add1~41    ; out0             ;
+; |design5|Add1~42    ; |design5|Add1~42    ; out0             ;
+; |design5|Add1~43    ; |design5|Add1~43    ; out0             ;
+; |design5|Add1~44    ; |design5|Add1~44    ; out0             ;
+; |design5|Add1~45    ; |design5|Add1~45    ; out0             ;
+; |design5|Add1~46    ; |design5|Add1~46    ; out0             ;
+; |design5|Add1~47    ; |design5|Add1~47    ; out0             ;
+; |design5|Add1~48    ; |design5|Add1~48    ; out0             ;
+; |design5|Add1~49    ; |design5|Add1~49    ; out0             ;
+; |design5|Add1~50    ; |design5|Add1~50    ; out0             ;
+; |design5|Add1~51    ; |design5|Add1~51    ; out0             ;
+; |design5|Add1~52    ; |design5|Add1~52    ; out0             ;
+; |design5|Add1~53    ; |design5|Add1~53    ; out0             ;
+; |design5|Add1~54    ; |design5|Add1~54    ; out0             ;
+; |design5|Add1~55    ; |design5|Add1~55    ; out0             ;
+; |design5|Add1~56    ; |design5|Add1~56    ; out0             ;
+; |design5|Add1~57    ; |design5|Add1~57    ; out0             ;
+; |design5|Add1~58    ; |design5|Add1~58    ; out0             ;
+; |design5|Add1~59    ; |design5|Add1~59    ; out0             ;
+; |design5|Add1~60    ; |design5|Add1~60    ; out0             ;
++---------------------+---------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Simulator
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Tue Nov 14 21:18:19 2023
+Info: Command: quartus_sim --simulation_results_format=VWF design5 -c design5
+Info (324025): Using vector source file "/home/python/Documents/projects/lab_4/ex5/quartus_test/Waveform.vwf"
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "Y[0]" in design.
+Info (310003): Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info (310004): Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Warning (324036): Found clock-sensitive change during active clock edge at time 30.0 ns on register "|design5|count0[0]"
+Warning (324036): Found clock-sensitive change during active clock edge at time 30.0 ns on register "|design5|S3[1]"
+Warning (324036): Found clock-sensitive change during active clock edge at time 30.0 ns on register "|design5|count3[0]"
+Warning (324036): Found clock-sensitive change during active clock edge at time 30.0 ns on register "|design5|count3[1]"
+Warning (324036): Found clock-sensitive change during active clock edge at time 70.0 ns on register "|design5|S0[0]"
+Warning (324036): Found clock-sensitive change during active clock edge at time 110.0 ns on register "|design5|S3[0]"
+Info (310002): Simulation partitioned into 1 sub-simulations
+Info (328053): Simulation coverage is      10.12 %
+Info (328052): Number of transitions in simulation is 1868
+Info (324045): Vector file design5.sim.vwf is saved in VWF text format. You can compress it into CVWF format in order to reduce file size. For more details please refer to the Quartus II Help.
+Info: Quartus II 64-Bit Simulator was successful. 0 errors, 7 warnings
+    Info: Peak virtual memory: 630 megabytes
+    Info: Processing ended: Tue Nov 14 21:18:20 2023
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
+
+

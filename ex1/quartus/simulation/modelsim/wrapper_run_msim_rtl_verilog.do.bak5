@@ -1,0 +1,11 @@
+transcript on
+if {[file exists rtl_work]} {
+	vdel -lib rtl_work -all
+}
+vlib rtl_work
+vmap work rtl_work
+
+vlog -sv -work work +incdir+/home/python/Documents/projects/lab_4/ex1 {/home/python/Documents/projects/lab_4/ex1/design1.sv}
+vlog -sv -work work +incdir+/home/python/Documents/projects/lab_4/ex1 {/home/python/Documents/projects/lab_4/ex1/one_bit_adder.sv}
+vlog -sv -work work +incdir+/home/python/Documents/projects/lab_4/ex1/quartus {/home/python/Documents/projects/lab_4/ex1/quartus/wrapper.sv}
+
